@@ -4,21 +4,39 @@
 .checked {
   color: orange;
 }
+h2 {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+.logo{
+  margin-bottom: 100px;
+  margin-top: 100px;
+}
+img{
+  margin-bottom: 80px;
+}
+.bloc{
+  padding: 10px 10px 60px 10px;
+}
 </style>
 <div class="container">
-  <div class="row" style="padding-top:80px;">
-    <h1>{{hyip.name}}</h1>
+  <div class="row text-center" style="padding-top:80px;">
+    <h1 class="d-block mx-auto"><b>{{hyip.name|upper}}</b></h1>
   </div>
 
-  <div class="row" style="padding-top:150px; padding-bottom:50px">
-    <div class="col-sm">
-      <img src="/images/{{ hyip.logo }}" class="img-fluid" alt="Responsive image">
+  <div class="row bloc">
+    <div class="col-sm text-center">
+      <img src="/images/{{ hyip.logo }}" class="img-fluid logo" alt="Responsive image">
     </div>
     <div class="col-sm"><table class="table">
       <tbody>
         <tr>
           <th scope="row">Nom</th>
           <td>{{ hyip.name }}</td>
+        </tr>
+        <tr>
+          <th scope="row">Statut</th>
+          <td style="text-align: center;font-weight:bold;background-color:{% if hyip.status=='payeur' %}#68FF33{% else %}#FF5533{% endif %}">{{ hyip.status }}</td>
         </tr>
         <tr>
           <th scope="row">Indice de confiance</th>
@@ -33,61 +51,64 @@
         </tr>
         <tr>
           <th scope="row">lien</th>
-          <td><a>{{ hyip.url }}</a></td>
+          <td><a href="{{ hyip.url }}" target="_blank">inscription</a></td>
         </tr>
         <tr>
           <th scope="row">dépot minimal</th>
-          <td><a>{{ hyip.minimalDeposit }}$</a></td>
+          <td>{{ hyip.minimalDeposit }}$</td>
         </tr>
         <tr>
           <th scope="row">Méthodes de dépot</th>
-          <td><a>{{ hyip.modesDepot }}</a></td>
+          <td>{{ hyip.modesDepot }}</td>
         </tr>
         <tr>
           <th scope="row">Méthodes de retrait</th>
-          <td><a>{{ hyip.modesRetrait }}</a></td>
+          <td>{{ hyip.modesRetrait }}</td>
         </tr>
         <tr>
           <th scope="row">Investissement conseillé</th>
-          <td><a>{{ hyip.percentage }}% du capital</a></td>
+          <td>{{ hyip.percentage }}% du capital</td>
         </tr>
       </tbody>
     </table>
   </div>
 </div>
 
-<div class="row" style="padding-top:80px; padding-left: 20px; padding-bottom: 50px">
+<div class="row bloc">
   <div class="col-sm">
-    <h2 style="font-weight: bold">Présentation</h2>
+    <h2>Présentation</h2>
     {{ hyip.presentation }}
   </div>
 </div>
 
-<div class="row" style="padding-top:80px; padding-left: 20px; padding-bottom: 50px">
+<div class="row bloc">
   <div class="col-sm">
-    <h2 style="font-weight: bold">Plans</h2>
+    <h2>Plans</h2>
     {{ hyip.plans }}
   </div>
 </div>
 
-<div class="row" style="padding-top:80px; padding-left: 20px; padding-bottom: 50px">
+<div class="row bloc">
   <div class="col-sm">
-    <h2 style="font-weight: bold">Affiliation</h2>
+    <h2>Affiliation</h2>
     {{ hyip.affiliation }}
   </div>
 </div>
 
-<div class="row" style="padding-top:80px; padding-left: 20px; padding-bottom: 50px">
+<div class="row bloc">
   <div class="col-sm">
-    <h2 style="font-weight: bold">Notre avis</h2>
+    <h2>Notre avis</h2>
     {{ hyip.avis }}
   </div>
 </div>
 
-<div class="row" style="padding-top:80px; padding-left: 20px; padding-bottom: 50px">
+<div class="row bloc">
+  <div class="col-lg">
+    <h2>Preuves de paiement</h2>
+  </div>
   {% for image in hyip.images %}
-  <div class="col-sm">
-    <img src="/images/{{ image }}" alt="Norway" class="img-responsive" style="margin:auto">
+  <div class="col-sm text-center">
+    <img src="/images/{{ image }}" class="img-responsive">
   </div>
   {% endfor %}
 </div>
