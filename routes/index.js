@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 const managers = require('../managers')
+const models = require('../models');
 
 const hyipsFixtures = require('../fixtures/hyips');
 
@@ -47,6 +48,18 @@ router.get('/hyip/:id', function(req, res, next) {
   .then(hyip => {
     console.log('hyip', hyip)
       res.render('hyip_details', { title: 'Express', hyip });
+  })
+});
+
+router.get('/insertTest', function(req, res, next) {
+  managers.hyip.insertTest()
+  .then(hyip => {
+    console.log('hyip created', hyip)
+      res.render('hyip_details', { title: 'Express', hyip });
+  })
+  .catch(e=>{
+    console.log('error');
+    console.log(e);
   })
 });
 

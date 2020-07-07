@@ -14,6 +14,7 @@
 <div class="container">
   <div class="row" style="padding: 80px;">
     <div class="col-sm">
+      <h1>Ajouter un HYIP</h1>
       <form action="/hyip/create" method="POST">
         <div class="form-group">
           <label for="name">Nom</label>
@@ -24,8 +25,20 @@
           <input type="text" class="form-control" id="url" name="url" placeholder="Entrer le lien">
         </div>
         <div class="form-group">
-          <label for="confiance">Confiance</label>
-          <input type="number" class="form-control" id="confiance" name="confiance" placeholder="Entrer la confiance" min="0" max="5">
+          <label for="serious">Sérieux</label>
+          <input type="number" class="form-control" id="serious" name="serious" placeholder="Entrer le sérieux" min="0" max="5">
+        </div>
+        <div class="form-group">
+          <label for="profitability">Rentabilité</label>
+          <input type="number" class="form-control" id="profitability" name="profitability" placeholder="Entrer la rentabilité" min="0" max="5">
+        </div>
+        <div class="form-group">
+          <label for="simplicity">Simplicité</label>
+          <input type="number" class="form-control" id="simplicity" name="simplicity" placeholder="Entrer la simplicité" min="0" max="5">
+        </div>
+        <div class="form-group">
+          <label for="sponsorship">Parrainage</label>
+          <input type="number" class="form-control" id="sponsorship" name="sponsorship" placeholder="Entrer le parrainage" min="0" max="5">
         </div>
         <div class="form-group">
           <label for="percentage">Pourcentage a investir</label>
