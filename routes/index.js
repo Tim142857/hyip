@@ -5,11 +5,22 @@ const managers = require('../managers')
 
 const hyipsFixtures = require('../fixtures/hyips');
 
-/* GET home page. */
+
 router.get('/', function(req, res, next) {
   res.redirect('/hyips')
 });
 
+
+/* FIXTURES */
+router.get('/insertFixtures', function(req, res, next) {
+  console.log(hyipsFixtures)
+  for(var hyip of hyipsFixtures){
+    managers.hyip.insert(hyip)
+  }
+  res.redirect('/hyips');
+});
+
+/* HYIPS */
 router.get('/hyips', function(req, res, next) {
   managers.hyip.findAll()
   .then(hyips => {
@@ -17,12 +28,17 @@ router.get('/hyips', function(req, res, next) {
   })
 });
 
-router.get('/insertFixtures', function(req, res, next) {
-  console.log(hyipsFixtures)
-  for(var hyip of hyipsFixtures){
-    managers.hyip.insert(hyip)
-  }
-  res.redirect('/hyips');
+router.get('/hyip/create', function(req, res, next) {
+  res.render('hyip_edit', { title: 'Express' });
+});
+
+router.post('/hyip/create', function(req, res, next) {
+  managers.hyip.insert(req.body)
+  .then(hyip => {
+    let redirectUrl = '/hyip/' + hyip.id;
+    console.log('redirectUrl', redirectUrl)
+    res.redirect(redirectUrl);
+  })
 });
 
 router.get('/hyip/:id', function(req, res, next) {
@@ -32,6 +48,12 @@ router.get('/hyip/:id', function(req, res, next) {
     console.log('hyip', hyip)
       res.render('hyip_details', { title: 'Express', hyip });
   })
+});
+
+
+/* 404 */
+router.get('*', function(req, res, next) {
+  res.redirect('/hyips')
 });
 
 module.exports = router;
