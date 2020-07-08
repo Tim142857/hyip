@@ -21,7 +21,7 @@ router.get('/hyips', function(req, res, next) {
 });
 
 router.get('/hyip/create', function(req, res, next) {
-  res.render('hyip_edit', { title: 'Express', hyip });
+  res.render('hyip_edit', { title: 'Express' });
 });
 
 router.post('/hyip/create', function(req, res, next) {
