@@ -1,13 +1,14 @@
 const DAL = require('../dal')
-const { Hyip } = require('../models')
+const { Hyip, ImageHyip } = require('../models')
 
   const findAll = function(){
-    return Hyip.findAll()
+    return Hyip.findAll({ include: { model: ImageHyip, as: 'images' } })
   }
   const findOneById = function(id){
-    return Hyip.findOne({ where: {id} });
+    return Hyip.findOne({ include: { model: ImageHyip, as: 'images' }, where: {id} });
   }
   const insert = function(hyip){
+    console.log('insert hyip: ', hyip)
     return Hyip.create(hyip);
   }
   const edit = function(newHyip){

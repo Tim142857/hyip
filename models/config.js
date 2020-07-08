@@ -25,23 +25,23 @@ sequelize.authenticate()
   console.error('Unable to connect to the database:', e);
 })
 
-// sequelize.sync({force: true})
-// .then(function () {
-//   console.log("Sequelize sync ended / DB updated")
-//
-//   const Models = require('./index')
-//   fixtures.loadFile('fixtures/data.json', Models)
-//   .then(function(){
-//     console.log('Fixtures inserted')
-//   })
-//   .catch(function(err){
-//     console.log('Error during fixtures insertion')
-//     console.log(err);
-//   })
-// })
-// .catch(err =>{
-//   console.log("Sequelize sync error:")
-//   console.log(err)
-// })
+sequelize.sync({force: true})
+.then(function () {
+  console.log("Sequelize sync ended / DB updated")
+
+  const Models = require('./index')
+  fixtures.loadFile('fixtures/data.json', Models)
+  .then(function(){
+    console.log('Fixtures inserted')
+  })
+  .catch(function(err){
+    console.log('Error during fixtures insertion')
+    console.log(err);
+  })
+})
+.catch(err =>{
+  console.log("Sequelize sync error:")
+  console.log(err)
+})
 
 module.exports = sequelize;

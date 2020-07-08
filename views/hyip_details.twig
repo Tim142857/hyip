@@ -16,7 +16,7 @@ img{
   margin-bottom: 80px;
 }
 .bloc{
-  padding: 10px 10px 60px 10px;
+  padding: 10px 10px 30px 10px;
 }
 .table-infos{
   margin-top: 70px;
@@ -32,7 +32,12 @@ img{
 
   <div class="row bloc">
     <div class="col-sm text-center">
-      <img src="/images/{{ hyip.logo }}" class="img-fluid logo" alt="Responsive image">
+      {% for image in hyip.images %}
+      {% if image.logo == true %}
+      <img src="/{{ image.fileName }}" class="img-fluid logo" alt="Responsive image">
+      {% endif %}
+      {% endfor %}
+
       <table class="table table-borderless">
         <tr>
           <th scope="row">Serieux</th>
@@ -118,13 +123,18 @@ img{
 </div>
 
 <div class="row bloc">
-  <div class="col-lg">
+  <div class="col-sm">
     <h2>Preuves de paiement</h2>
   </div>
+</div>
+
+<div class="row bloc">
   {% for image in hyip.images %}
-  <div class="col-sm text-center">
-    <img src="/images/{{ image }}" class="img-responsive">
+  {% if image.logo == false %}
+  <div class="col-sm text-center" style="padding:20px">
+    <img src="/{{ image.fileName }}" class="img-fluid">
   </div>
+  {% endif %}
   {% endfor %}
 </div>
 

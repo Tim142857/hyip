@@ -8,10 +8,18 @@ const ImageHyip = sequelize.define('imageHyip', {
     autoIncrement: true,
     primaryKey: true,
   },
-  filename: {
+  fileName: {
     type: Sequelize.STRING,
     required: true
-  }
+  },
+  originalName: {
+    type: Sequelize.STRING,
+    required: true
+  },
+  logo: {
+    type: Sequelize.BOOLEAN,
+    defaultValue: false
+  },
 }, {
   timestamps: true,
 });

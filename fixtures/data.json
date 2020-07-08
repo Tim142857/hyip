@@ -2,6 +2,7 @@
   {
     "model": "Hyip",
     "data": {
+      "id": 1,
       "name": "Mind Capital",
       "url": "https://mind.capital/fr/",
       "serious": 1,
@@ -11,13 +12,69 @@
       "percentage": 35,
       "minimalDeposit": 40,
       "payeur": true,
-      "logo": "logo_mc.svg",
       "modesDepot": "Bitcoin",
       "modesRetrait": "$ USD",
       "presentation": "presentation de <b>Mind Capital<b>",
       "plans": "plans de MC",
       "affiliation": "affiliation de MC",
       "avis": "avis de MC"
+    }
+  },
+  {
+    "model": "Hyip",
+    "data": {
+      "id": 11,
+      "name": "Mind Capital test",
+      "url": "https://mind.capital/fr/",
+      "serious": 1,
+      "profitability": 0,
+      "simplicity": 3,
+      "sponsorship": 5,
+      "percentage": 35,
+      "minimalDeposit": 40,
+      "payeur": true,
+      "modesDepot": "Bitcoin",
+      "modesRetrait": "$ USD",
+      "presentation": "presentation de <b>Mind Capital<b>",
+      "plans": "plans de MC",
+      "affiliation": "affiliation de MC",
+      "avis": "avis de MC"
+    }
+  },
+  {
+    "model":  "ImageHyip",
+    "data":{
+      "fileName": "logo-1594216096973-393896511.svg",
+      "originalName": "logo_mc.svg",
+      "logo": true,
+      "hyipId": 1
+    }
+  },
+  {
+    "model":  "ImageHyip",
+    "data": {
+      "fileName": "logo-1594216096973-393896511.svg",
+      "originalName": "logo_mc.svg",
+      "logo": true,
+      "hyipId": 11
+    }
+  },
+  {
+    "model":  "ImageHyip",
+    "data": {
+      "fileName": "images-1594215775154-316493005.jpg",
+      "originalName": "pizz.jpg",
+      "logo": false,
+      "hyipId": 11
+    }
+  },
+  {
+    "model":  "ImageHyip",
+    "data": {
+      "fileName": "images-1594215794581-335967753.jpg",
+      "originalName": "hamac.jpg",
+      "logo": false,
+      "hyipId": 11
     }
   }
 ]

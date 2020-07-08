@@ -7,6 +7,6 @@ var Models = {
   ImageHyip
 }
 
-Hyip.hasMany(ImageHyip);
+Hyip.hasMany(ImageHyip, { as: 'images' });
 
 module.exports = Models;

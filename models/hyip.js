@@ -1,6 +1,6 @@
 var Sequelize = require('sequelize');
 var sequelize = require('./config');
-
+const ImageHyip = require('./imageHyip')
 
 const Hyip = sequelize.define('hyip', {
   id: {
@@ -45,10 +45,6 @@ const Hyip = sequelize.define('hyip', {
     required: true,
     defaultValue: true
   },
-  logo: {
-    type: Sequelize.STRING,
-    required: false
-  },
   modesDepot: {
     type: Sequelize.STRING,
     required: true
@@ -77,5 +73,6 @@ const Hyip = sequelize.define('hyip', {
 }, {
   timestamps: true,
 });
+
 
 module.exports = Hyip;

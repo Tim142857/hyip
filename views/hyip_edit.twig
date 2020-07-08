@@ -15,7 +15,7 @@
   <div class="row" style="padding: 80px;">
     <div class="col-sm">
       <h1>Ajouter un HYIP</h1>
-      <form action="/hyip/{% if hyip %}edit{% else %}create{% endif %}" method="POST">
+      <form action="/hyip/{% if hyip %}edit{% else %}create{% endif %}" method="POST" enctype="multipart/form-data">
         {% if hyip %}<input type="hidden" class="form-control" id="id" name="id" value={{ hyip.id }}>{% endif %}
         <div class="form-group">
           <label for="name">Nom</label>
@@ -80,6 +80,14 @@
           <label for="avis">Notre avis</label>
           <textarea class="form-control content" id="avis" name="avis" rows="5" required></textarea>
         </div>
+        <div class="form-group">
+          <label for="logo">Image logo</label>
+          <input type="file" name="logo" id="logo">
+        </div>
+        <div class="form-group">
+          <label for="images">Autres images</label>
+          <input type="file" name="images" id="images" multiple>
+        </div>
         <button type="submit" class="btn btn-primary">Valider</button>
       </form>
     </div>
@@ -91,13 +99,13 @@ $(document).ready(function() {
     height: 250
   });
   {% if hyip %}
-  let textPresentation = "{{ hyip.presentation }}";
+  let textPresentation = '{{ hyip.presentation }}';
   $('#presentation').summernote('code', textPresentation);
-  let textPlans = "{{ hyip.plans }}";
+  let textPlans = '{{ hyip.plans }}';
   $('#plans').summernote('code', textPlans);
-  let textAffiliation = "{{ hyip.affiliation }}";
+  let textAffiliation = '{{ hyip.affiliation }}';
   $('#affiliation').summernote('code', textAffiliation);
-  let textAvis = "{{ hyip.avis }}";
+  let textAvis = '{{ hyip.avis }}';
   $('#avis').summernote('code', textAvis);
   {% endif %}
 });
