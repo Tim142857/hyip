@@ -36,47 +36,19 @@ img{
       <table class="table table-borderless">
         <tr>
           <th scope="row">Serieux</th>
-          <td>
-            {% for i in 1..hyip.serious %}
-            <span class="fa fa-star checked"></span>
-            {% endfor %}
-            {% for i in 1..(5-hyip.serious) %}
-            <span class="fa fa-star"></span>
-            {% endfor %}
-          </td>
+          <td>{{ getStars(hyip.serious,5) }}</td>
         </tr>
         <tr>
           <th scope="row">Rentabilité</th>
-          <td>
-            {% for i in 1..hyip.profitability %}
-            <span class="fa fa-star checked"></span>
-            {% endfor %}
-            {% for i in 1..(5-hyip.profitability) %}
-            <span class="fa fa-star"></span>
-            {% endfor %}
-          </td>
+          <td>{{ getStars(hyip.profitability,5) }}</td>
         </tr>
         <tr>
           <th scope="row">Simplicité</th>
-          <td>
-            {% for i in 1..hyip.simplicity %}
-            <span class="fa fa-star checked"></span>
-            {% endfor %}
-            {% for i in 1..(5-hyip.simplicity) %}
-            <span class="fa fa-star"></span>
-            {% endfor %}
-          </td>
+          <td>{{ getStars(hyip.simplicity,5) }}</td>
         </tr>
         <tr>
           <th scope="row">Parrainage</th>
-          <td>
-            {% for i in 1..hyip.sponsorship %}
-            <span class="fa fa-star checked"></span>
-            {% endfor %}
-            {% for i in 1..(5-hyip.sponsorship) %}
-            <span class="fa fa-star"></span>
-            {% endfor %}
-          </td>
+          <td>{{ getStars(hyip.sponsorship,5) }}</td>
         </tr>
       </table>
     </div>
@@ -88,7 +60,9 @@ img{
         </tr>
         <tr>
           <th scope="row">Statut</th>
-          <td style="text-align: center;font-weight:bold;background-color:{% if hyip.status=='payeur' %}#68FF33{% else %}#FF5533{% endif %}">{{ hyip.status }}</td>
+          <td style="text-align: center;font-weight:bold;background-color:{% if hyip.payeur %}#68FF33{% else %}#FF5533{% endif %}">
+            {% if hyip.payeur %}Payeur{% else %}Non payeur{% endif %}
+          </td>
         </tr>
         <tr>
           <th scope="row">lien</th>

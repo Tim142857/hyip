@@ -15,66 +15,70 @@
   <div class="row" style="padding: 80px;">
     <div class="col-sm">
       <h1>Ajouter un HYIP</h1>
-      <form action="/hyip/create" method="POST">
+      <form action="/hyip/{% if hyip %}edit{% else %}create{% endif %}" method="POST">
+        {% if hyip %}<input type="hidden" class="form-control" id="id" name="id" value={{ hyip.id }}>{% endif %}
         <div class="form-group">
           <label for="name">Nom</label>
-          <input type="text" class="form-control" id="name" name="name" placeholder="Entrer le nom">
+          <input type="text" class="form-control" id="name" name="name" placeholder="Entrer le nom" required {% if hyip %}value="{{ hyip.name }}"{% endif %}>
         </div>
         <div class="form-group">
           <label for="url">Lien</label>
-          <input type="text" class="form-control" id="url" name="url" placeholder="Entrer le lien">
+          <input type="text" class="form-control" id="url" name="url" placeholder="Entrer le lien"  required {% if hyip %}value="{{hyip.url}}"{% endif %}>
         </div>
         <div class="form-group">
           <label for="serious">Sérieux</label>
-          <input type="number" class="form-control" id="serious" name="serious" placeholder="Entrer le sérieux" min="0" max="5">
+          <input type="number" class="form-control" id="serious" name="serious" placeholder="Entrer le sérieux" min="0" max="5" required {% if hyip %}value={{hyip.serious}}{% endif %}>
         </div>
         <div class="form-group">
           <label for="profitability">Rentabilité</label>
-          <input type="number" class="form-control" id="profitability" name="profitability" placeholder="Entrer la rentabilité" min="0" max="5">
+          <input type="number" class="form-control" id="profitability" name="profitability" placeholder="Entrer la rentabilité" min="0" max="5" required {% if hyip %}value={{hyip.profitability}}{% endif %}>
         </div>
         <div class="form-group">
           <label for="simplicity">Simplicité</label>
-          <input type="number" class="form-control" id="simplicity" name="simplicity" placeholder="Entrer la simplicité" min="0" max="5">
+          <input type="number" class="form-control" id="simplicity" name="simplicity" placeholder="Entrer la simplicité" min="0" max="5" required {% if hyip %}value={{hyip.simplicity}}{% endif %}>
         </div>
         <div class="form-group">
           <label for="sponsorship">Parrainage</label>
-          <input type="number" class="form-control" id="sponsorship" name="sponsorship" placeholder="Entrer le parrainage" min="0" max="5">
+          <input type="number" class="form-control" id="sponsorship" name="sponsorship" placeholder="Entrer le parrainage" min="0" max="5" required {% if hyip %}value={{hyip.sponsorship}}{% endif %}>
         </div>
         <div class="form-group">
           <label for="percentage">Pourcentage a investir</label>
-          <input type="number" class="form-control" id="percentage" name="percentage" placeholder="Entrer le pourcentage" min="0" max="100">
+          <input type="number" class="form-control" id="percentage" name="percentage" placeholder="Entrer le pourcentage" min="0" max="100" required {% if hyip %}value={{hyip.percentage}}{% endif %}>
         </div>
         <div class="form-group">
           <label for="minimalDeposit">Dépot minimal</label>
-          <input type="number" class="form-control" id="minimalDeposit" name="minimalDeposit" placeholder="Entrer le depot minimal" min="0" max="1000">
+          <input type="number" class="form-control" id="minimalDeposit" name="minimalDeposit" placeholder="Entrer le depot minimal" min="0" max="1000" required {% if hyip %}value={{hyip.minimalDeposit}}{% endif %}>
         </div>
         <div class="form-group">
           <label for="modesDepot">modes de dépôt</label>
-          <input type="text" class="form-control" id="modesDepot" name="modesDepot" placeholder="Entrer les différents modes de dépôt">
+          <input type="text" class="form-control" id="modesDepot" name="modesDepot" placeholder="Entrer les différents modes de dépôt" required {% if hyip %}value="{{hyip.modesDepot}}"{% endif %}>
         </div>
         <div class="form-group">
           <label for="modesRetrait">modes de retrait</label>
-          <input type="text" class="form-control" id="modesRetrait" name="modesRetrait" placeholder="Entrer les différents modes de retrait">
+          <input type="text" class="form-control" id="modesRetrait" name="modesRetrait" placeholder="Entrer les différents modes de retrait" required {% if hyip %}value="{{hyip.modesRetrait}}"{% endif %}>
         </div>
         <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="status" name="status">
+          <br>
+          <input type="checkbox" class="form-check-input" id="payeur" name="payeur" {% if hyip and hyip.payeur %}checked{% endif %} value="true">
           <label class="form-check-label" for="status">Payeur?</label>
+          <br>
         </div>
+        <br>
         <div class="form-group">
           <label for="presentation">Présentation</label>
-          <textarea class="form-control content" id="presentation" name="presentation" rows="5"></textarea>
+          <textarea class="form-control content" id="presentation" name="presentation" rows="5" required></textarea>
         </div>
         <div class="form-group">
           <label for="plans">Plans</label>
-          <textarea class="form-control content" id="plans" name="plans" rows="5"></textarea>
+          <textarea class="form-control content" id="plans" name="plans" rows="5" required></textarea>
         </div>
         <div class="form-group">
           <label for="affiliation">Affiliation</label>
-          <textarea class="form-control content" id="affiliation" name="affiliation" rows="5"></textarea>
+          <textarea class="form-control content" id="affiliation" name="affiliation" rows="5" required></textarea>
         </div>
         <div class="form-group">
           <label for="avis">Notre avis</label>
-          <textarea class="form-control content" id="avis" name="avis" rows="5"></textarea>
+          <textarea class="form-control content" id="avis" name="avis" rows="5" required></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Valider</button>
       </form>
@@ -82,10 +86,20 @@
   </div>
 </div>
 <script>
-  $(document).ready(function() {
-      $('textarea').summernote({
-        height: 250
-      });
+$(document).ready(function() {
+  $('textarea').summernote({
+    height: 250
   });
+  {% if hyip %}
+  let textPresentation = "{{ hyip.presentation }}";
+  $('#presentation').summernote('code', textPresentation);
+  let textPlans = "{{ hyip.plans }}";
+  $('#plans').summernote('code', textPlans);
+  let textAffiliation = "{{ hyip.affiliation }}";
+  $('#affiliation').summernote('code', textAffiliation);
+  let textAvis = "{{ hyip.avis }}";
+  $('#avis').summernote('code', textAvis);
+  {% endif %}
+});
 </script>
 {% endblock %}

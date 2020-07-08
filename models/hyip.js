@@ -40,13 +40,14 @@ const Hyip = sequelize.define('hyip', {
     type: Sequelize.INTEGER,
     required: true
   },
-  status: {
-    type: Sequelize.STRING,
-    required: true
+  payeur: {
+    type: Sequelize.BOOLEAN,
+    required: true,
+    defaultValue: true
   },
   logo: {
     type: Sequelize.STRING,
-    required: true
+    required: false
   },
   modesDepot: {
     type: Sequelize.STRING,

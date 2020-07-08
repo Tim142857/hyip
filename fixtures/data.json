@@ -1,0 +1,23 @@
+[
+  {
+    "model": "Hyip",
+    "data": {
+      "name": "Mind Capital",
+      "url": "https://mind.capital/fr/",
+      "serious": 1,
+      "profitability": 0,
+      "simplicity": 3,
+      "sponsorship": 5,
+      "percentage": 35,
+      "minimalDeposit": 40,
+      "payeur": true,
+      "logo": "logo_mc.svg",
+      "modesDepot": "Bitcoin",
+      "modesRetrait": "$ USD",
+      "presentation": "presentation de <b>Mind Capital<b>",
+      "plans": "plans de MC",
+      "affiliation": "affiliation de MC",
+      "avis": "avis de MC"
+    }
+  }
+]
