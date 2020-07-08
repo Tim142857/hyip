@@ -5,7 +5,7 @@ const { Hyip } = require('../models')
     return Hyip.findAll()
   }
   const findOneById = function(id){
-    return Hyip.findOne({ id });
+    return Hyip.findOne({ where: {id} });
   }
   const insert = function(hyip){
     return Hyip.create(hyip);
