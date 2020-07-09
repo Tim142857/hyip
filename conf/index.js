@@ -1,5 +1,5 @@
-const appConf = require('./appConf')
-const db = require('./db')
+const appConf = require('./local/appConf')
+const db = require('./local/db')
 
 
 module.exports = {
