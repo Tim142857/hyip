@@ -32,11 +32,7 @@ img{
 
   <div class="row bloc">
     <div class="col-sm text-center">
-      {% for image in hyip.images %}
-      {% if image.logo == true %}
-      <img src="/{{ image.fileName }}" class="img-fluid logo" alt="Responsive image">
-      {% endif %}
-      {% endfor %}
+      <img src="/{{ getHyipLogoFileName(hyip) }}" class="img-fluid logo" alt="Responsive image">
 
       <table class="table table-borderless">
         <tr>

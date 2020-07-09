@@ -8,18 +8,8 @@ var bodyParser = require('body-parser');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
-var Twig = require('twig');
+var Twig = require('./twig');
 
-Twig.extendFunction("getStars", function(current, max) {
-  var html = "";
-  for(var i = 0; i < current; i++){
-    html += '<span class="fa fa-star checked"></span>';
-  }
-  for(var i = 0; i < (max-current); i++){
-    html += '<span class="fa fa-star"></span>';
-  }
-  return html;
-});
 
 var app = express();
 
