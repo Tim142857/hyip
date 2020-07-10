@@ -35,7 +35,7 @@
       <a href="/hyip/{{ hyip.id }}">
         <h2 style="color: black; padding:12px 0px;"><b>{{ hyip.name }}</b></h2>
       </a>
-      <p>{{ hyip.presentation|slice(0,350) }}...</p>
+      <p>{{ hyip.truncatedPresentation }}</p>
     </div>
   </div>
   {% endfor %}

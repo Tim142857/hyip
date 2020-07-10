@@ -3,6 +3,7 @@ const router = express.Router();
 const path = require('path');
 const managers = require('../managers')
 const models = require('../models');
+const clip = require("text-clipper").default;
 const multer = require('multer');
 // SET STORAGE
 var upload = multer({ dest: 'uploads' })
@@ -32,6 +33,9 @@ router.get('/', function(req, res, next) {
 router.get('/hyips', function(req, res, next) {
   managers.hyip.findAll()
   .then(hyips => {
+    hyips.forEach(hyip => {
+      hyip.truncatedPresentation = clip(hyip.presentation, 200, { html: true })
+    })
     res.render('hyips', { title: 'Express', hyips });
   })
 });

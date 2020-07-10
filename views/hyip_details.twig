@@ -24,6 +24,10 @@ img{
 .table-dark {
   background-color: #616161!important;
 }
+#lien{
+  color: black;
+  font-weight: bold;
+}
 </style>
 <div class="container">
   <div class="row text-center" style="padding-top:80px;">
@@ -66,11 +70,11 @@ img{
           </td>
         </tr>
         <tr>
-          <th scope="row">lien</th>
-          <td><a href="{{ hyip.url }}" target="_blank">inscription</a></td>
+          <th scope="row">Lien</th>
+          <td><a id="lien" href="{{ hyip.url }}" target="_blank">Inscription</a></td>
         </tr>
         <tr>
-          <th scope="row">dépot minimal</th>
+          <th scope="row">Dépot minimal</th>
           <td>{{ hyip.minimalDeposit }}$</td>
         </tr>
         <tr>
