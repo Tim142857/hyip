@@ -76,5 +76,21 @@
       "logo": false,
       "hyipId": 11
     }
+  },
+  {
+    "model":  "User",
+    "data": {
+      "username": "Tim",
+      "password": "1234",
+      "role": "admin"
+    }
+  },
+  {
+    "model":  "User",
+    "data": {
+      "username": "Joris",
+      "password": "12345",
+      "role": "member"
+    }
   }
 ]
