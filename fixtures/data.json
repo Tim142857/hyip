@@ -14,7 +14,7 @@
       "payeur": true,
       "modesDepot": "Bitcoin",
       "modesRetrait": "$ USD",
-      "presentation": "presentation de <b>Mind Capital<b>",
+      "presentation": "Ici, une présentation courte de <b>Mind capital</b><br> sur seulement 2 lignes",
       "plans": "plans de MC",
       "affiliation": "affiliation de MC",
       "avis": "avis de MC"
@@ -35,7 +35,49 @@
       "payeur": true,
       "modesDepot": "Bitcoin",
       "modesRetrait": "$ USD",
-      "presentation": "presentation de <b>Mind Capital<b>",
+      "presentation": "Ici, une présentation longue de <b>Mind capital</b><br> sur plusieurs <br> lignes<br> pour voir <br> ce que ca donne<br>",
+      "plans": "plans de MC",
+      "affiliation": "affiliation de MC",
+      "avis": "avis de MC"
+    }
+  },
+  {
+    "model": "Hyip",
+    "data": {
+      "id": 21,
+      "name": "Mind Capital test",
+      "url": "https://mind.capital/fr/",
+      "serious": 1,
+      "profitability": 0,
+      "simplicity": 3,
+      "sponsorship": 5,
+      "percentage": 35,
+      "minimalDeposit": 40,
+      "payeur": true,
+      "modesDepot": "Bitcoin",
+      "modesRetrait": "$ USD",
+      "presentation": "Ici, une présentation longue de <b>Mind capital</b><br> sur plusieurs <br> lignes<br> pour voir <br> ce que ca donne<br>",
+      "plans": "plans de MC",
+      "affiliation": "affiliation de MC",
+      "avis": "avis de MC"
+    }
+  },
+  {
+    "model": "Hyip",
+    "data": {
+      "id": 31,
+      "name": "Mind Capital test",
+      "url": "https://mind.capital/fr/",
+      "serious": 1,
+      "profitability": 0,
+      "simplicity": 3,
+      "sponsorship": 5,
+      "percentage": 35,
+      "minimalDeposit": 40,
+      "payeur": true,
+      "modesDepot": "Bitcoin",
+      "modesRetrait": "$ USD",
+      "presentation": "Ici, une présentation longue de <b>Mind capital</b><br> sur plusieurs <br> lignes<br> pour voir <br> ce que ca donne<br>",
       "plans": "plans de MC",
       "affiliation": "affiliation de MC",
       "avis": "avis de MC"
@@ -75,6 +117,24 @@
       "originalName": "hamac.jpg",
       "logo": false,
       "hyipId": 11
+    }
+  },
+  {
+    "model":  "ImageHyip",
+    "data": {
+      "fileName": "logo-1594216096973-393896511.svg",
+      "originalName": "logo_mc.svg",
+      "logo": true,
+      "hyipId": 21
+    }
+  },
+  {
+    "model":  "ImageHyip",
+    "data": {
+      "fileName": "logo-1594216096973-393896511.svg",
+      "originalName": "logo_mc.svg",
+      "logo": true,
+      "hyipId": 31
     }
   },
   {

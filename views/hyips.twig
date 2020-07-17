@@ -1,59 +1,134 @@
 {% extends 'layout.twig' %}
+{% block styles %}
+<style>
+.checked {
+  color: orange;
+}
+#notes span{
+  font-weight: bold;
+}
+#notes td{
+  padding:.5rem !important;
+}
+.no-padding{
+  padding: 0;
+}
+
+.descriptif{
+  height:300px;
+  margin-bottom: 50px
+}
+#hyip-definition p{
+  display: none;
+}
+
+#hyip-definition i{
+  cursor: pointer;
+  margin-left: 6px;
+}
+
+</style>
+{% endblock %}
 {% block header %}
 <header id="portfolio">
   <a href="#"><img src="/images/hyip_banniere.png" style="width:120px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
   <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
   <div class="w3-container">
-    <h1><b>HYIP</b></h1>
-    <div class="w3-section w3-bottombar w3-padding-16">
-      <span class="w3-margin-right">Filtre:</span>
-      <button class="w3-button w3-black">ALL</button>
-      <button class="w3-button w3-white"><i class="fa fa-diamond w3-margin-right"></i>Les + sures</button>
-      <button class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>Petits dépots</button>
-      <button class="w3-button w3-white w3-hide-small"><i class="fa fa-map-pin w3-margin-right"></i>Meilleurs risques/rewards</button>
-    </div>
-  </div>
+    <!-- <div class="w3-section w3-bottombar w3-padding-16">
+    <span class="w3-margin-right">Filtre:</span>
+    <button class="w3-button w3-black">ALL</button>
+    <button class="w3-button w3-white"><i class="fa fa-diamond w3-margin-right"></i>Les + sures</button>
+    <button class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>Petits dépots</button>
+    <button class="w3-button w3-white w3-hide-small"><i class="fa fa-map-pin w3-margin-right"></i>Meilleurs risques/rewards</button>
+  </div> -->
+</div>
 </header>
 {% endblock %}
 
 {% block body %}
+<div class="container">
+  <br><br>
+  <h1><b>HYIP</b></h1>
+  <br><br>
+  <div class="row">
+    <div class="col" id="hyip-definition">
+      <div>Nouveau dans la section ? Besoin de plus d'infos sur les <b>HYIP</b> ? Cliques ici <i class="fa fa-arrow-right"></i>
+      </div>
+      <br><br>
+      <p id="defintion-hyip">
+        Programmes d'investissement à haut rendement ou en anglais <span>High Yield Investment Program</span>, les HYIP sont des programmes avec des (très) gros rendements. <br>
+        Si tu t'es habitué à tes 0.5% annuels du PEL de ta banque, tu risques de vite halluciner. <br>
+        La plupart de ces programmes proposent 1% d'intérêts journaliers, voire beaucoup plus !<br>
+        <br>
+        Mais attention, une grosse part de ces sites internet sont ou deviendront des arnaques où les membres inscrits perdront leur capital investi (on dit qu'ils scam).<br>
+        Et c'est la qu'on intervient! Et oui, même si cela est risqué, ca peut-être très rentable si on choisit bien et qu'on fait le bon investissement. <br>
+        Vous pourrez voir par vous memes sur les fiches de chaque site quelques sommes qu'on a pu gagner! Cela est possible pour vous aussi! <br><br>
+        Sur chaque fiche de détails, vous pourrez y voir une présentation de chaque site/entreprise ainsi que notre avis se basant sur plusieurs critères. <br>
+        Et vous pour vous aider, encore plus, nous avons aussi ajouté les sites que l'on a tester et qui n'ont pas fonctionné, ca vous éviter de tomber dans le piège!<br>
 
-
-<div class="w3-row-padding">
-  {% for hyip in hyips %}
-  <div class="w3-third w3-container w3-margin-bottom">
-    <a href="/hyips/{{ hyip.id }}">
-      <div style="border: 1px black solid; padding:15px; height: 180px;" class="w3-dark-grey d-flex flex-wrap align-items-center">
-        {% for image in hyip.images %}
-        {% if image.logo == true %}
-        <img src="/{{image.fileName}}" alt="logo-{{hyip.name}}" class="img-fluid d-block mx-auto">
-        {% endif %}
-        {% endfor %}
+        <br>
+        Nous vous conseillons de vous donner un capital investissement (qui est une somme que vous etes prêts à perdre!) et de diviser vos investissements sur plusieurs sites.
+        On vous indique meme le pourcentage de votre capital que nous pensons être le mieux pour chaque site.
+        <br><br>
+      </p>
     </div>
-    </a>
-    <div class="w3-container w3-white">
-      <a href="/hyips/{{ hyip.id }}">
-        <h2 style="color: black; padding:12px 0px;"><b>{{ hyip.name }}</b></h2>
-      </a>
-      <p>{{ hyip.truncatedPresentation }}</p>
-    </div>
+    <br><br>
   </div>
-  {% endfor %}
+  <div class="row">
+    {% for hyip in hyips %}
+    <div class="col-md-4">
+      <a href="/hyips/{{ hyip.id }}">
+        <div style="border: 1px black solid; padding:15px; height: 180px;" class="w3-grey d-flex flex-wrap align-items-center">
+          {% for image in hyip.images %}
+          {% if image.logo == true %}
+          <img src="/{{image.fileName}}" alt="logo-{{hyip.name}}" class="img-fluid d-block mx-auto">
+          {% endif %}
+          {% endfor %}
+        </div>
+      </a>
+      <div class="w3-container w3-white descriptif">
+        <a href="/hyips/{{ hyip.id }}">
+          <h2 style="color: black; padding:12px 0px;text-align: center"><b>{{ hyip.name }}</b></h2>
+        </a>
+        <table class="table table-borderless" id="notes">
+          <tr>
+            <td>Serieux: <span>{{hyip.serious}}/5</span></td>
+            <td>Rentabilité: <span>{{hyip.profitability}}/5</span></td>
+          </tr>
+          <tr>
+            <td>Simplicité: <span>{{hyip.simplicity}}/5</span></td>
+            <td>Parrainage: <span>{{hyip.sponsorship}}/5</span></td>
+          </tr>
+        </table>
+        <br>
+        <p>{{ hyip.truncatedPresentation }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
 </div>
 
 <!-- Pagination -->
 <!-- <div class="w3-center w3-padding-32">
-  <div class="w3-bar">
-    <a href="#" class="w3-bar-item w3-button w3-hover-black">&laquo;</a>
-    <a href="#" class="w3-bar-item w3-black w3-button">1</a>
-    <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
-    <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
-    <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
-    <a href="#" class="w3-bar-item w3-button w3-hover-black">&raquo;</a>
-  </div>
+<div class="w3-bar">
+<a href="#" class="w3-bar-item w3-button w3-hover-black">&laquo;</a>
+<a href="#" class="w3-bar-item w3-black w3-button">1</a>
+<a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
+<a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
+<a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
+<a href="#" class="w3-bar-item w3-button w3-hover-black">&raquo;</a>
+</div>
 </div> -->
 
+{% endblock %}
 
+{% block scripts %}
 
-
+<script>
+$(document).ready(function() {
+  $('#hyip-definition i').click(function(){
+    $("#defintion-hyip").css('display', 'block')
+  });
+});
+</script>
 {% endblock %}
