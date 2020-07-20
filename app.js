@@ -12,8 +12,11 @@ var flash = require('connect-flash');
 var usersRouter = require('./routes/users');
 var indexRouter = require('./routes/index');
 var hyipsRouter = require('./routes/hyips');
+var adminRouter = require('./routes/admin');
 
 var Twig = require('./twig');
+
+const Middlewares = require('./middlewares');
 
 
 
@@ -22,10 +25,10 @@ var app = express();
 
 app.use(flash());
 app.use(session({
-    secret: 'mon_secret',
-    name: 'mon_cookie',
-    resave: true,
-    saveUninitialized: true
+  secret: 'mon_secret',
+  name: 'mon_cookie',
+  resave: true,
+  saveUninitialized: true
 }));
 
 
@@ -61,6 +64,7 @@ app.use(passport.session());
 
 app.use('/users', usersRouter);
 app.use('/hyips', hyipsRouter);
+app.use('/admin', Middlewares.isAdmin, adminRouter);
 app.use('/', indexRouter);
 
 // catch 404 and forward to error handler

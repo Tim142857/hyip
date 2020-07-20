@@ -10,6 +10,13 @@ router.get('/', function(req, res, next) {
   res.render('index');
 });
 
+router.post('/send-message', function(req, res, next) {
+  managers.Message.create(req.body)
+  .then(msg => {
+    req.flash('success', ["Votre message a bien été envoyé"]);
+    res.redirect('/');
+  })
+});
 
 /*  IN PREPARATION */
 router.get('/about', function(req, res, next) {

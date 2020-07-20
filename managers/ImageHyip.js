@@ -2,6 +2,9 @@ const DAL = require('../dal')
 const { ImageHyip } = require('../models')
 
 const buildFromBody = function(hyipId, images){
+  if(!images || images.length===0){
+    return Promise.resolve([])
+  }
   let imagesToSave = [];
   for(image of images){
     imagesToSave.push({
@@ -13,7 +16,9 @@ const buildFromBody = function(hyipId, images){
   return ImageHyip.bulkCreate(imagesToSave)
 }
 
-const buildLogo = function(hyipId, file){
+const buildLogo = function(hyipId, files){
+  if(!files || files.length === 0) return Promise.resolve()
+  let file = files[0]
   return ImageHyip.create({
     fileName: file.filename,
     originalName: file.originalname,

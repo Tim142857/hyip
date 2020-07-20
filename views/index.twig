@@ -53,18 +53,18 @@
 
 </div>
 <hr class="w3-opacity">
-<form action="/action_page.php" target="_blank">
+<form action="/send-message" method="POST">
   <div class="w3-section">
     <label>Nom</label>
-    <input class="w3-input w3-border" type="text" name="Name" required>
+    <input class="w3-input w3-border" type="text" name="name" required>
   </div>
   <div class="w3-section">
     <label>Email</label>
-    <input class="w3-input w3-border" type="text" name="Email" required>
+    <input class="w3-input w3-border" type="text" name="mail" required>
   </div>
   <div class="w3-section">
     <label>Message</label>
-    <textarea class="w3-input w3-border" type="text" name="Message" required></textarea>
+    <textarea class="w3-input w3-border" type="text" name="content" required></textarea>
   </div>
   <button type="submit" class="w3-button w3-black w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Envoyer</button>
 </form>

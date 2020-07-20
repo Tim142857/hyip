@@ -1,6 +1,6 @@
 module.exports = function(req, res, next){
-  console.log('middleware')
   if(!req.user){
+    req.session.redirectTo = req.originalUrl
     res.redirect('/users/login');
   } else if(req.user.role !== "admin"){
     req.flash('error', ["Vous n'avez pas les droits"])
