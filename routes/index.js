@@ -19,12 +19,24 @@ router.post('/send-message', function(req, res, next) {
 });
 
 /*  IN PREPARATION */
+router.get('/blog', function(req, res, next) {
+  res.render('inPreparation');
+});
+
+router.get('/trading', function(req, res, next) {
+  res.render('inPreparation');
+});
+
+router.get('/immobilier', function(req, res, next) {
+  res.render('inPreparation');
+});
+
 router.get('/about', function(req, res, next) {
-  res.render('inPreparation', { hyips });
+  res.render('inPreparation');
 });
 
 router.get('/contact', function(req, res, next) {
-  res.render('inPreparation', { hyips });
+  res.render('inPreparation');
 });
 
 

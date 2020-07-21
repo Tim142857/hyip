@@ -66,7 +66,6 @@ router.get('/hyip/create', function(req, res, next) {
   res.render('admin/hyip_edit', { title: 'Ajout HYIP' });
 });
 
-
 router.post('/hyip/create', upload.fields([
   { name: 'logo', maxCount: 1 },
   { name: 'images', maxCount: 4 }

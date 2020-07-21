@@ -57,22 +57,31 @@
       <br><br>
       <p id="defintion-hyip">
         Programmes d'investissement à haut rendement ou en anglais <span>High Yield Investment Program</span>, les HYIP sont des programmes avec des (très) gros rendements. <br>
-        Si tu t'es habitué à tes 0.5% annuels du PEL de ta banque, tu risques de vite halluciner. <br>
-        La plupart de ces programmes proposent 1% d'intérêts journaliers, voire beaucoup plus !<br>
+        Si tu t'es habitué à tes 0.5 % annuels du PEL de ta banque, tu risques de vite halluciner. <br>
+        La plupart de ces programmes proposent 1 % d'intérêts journaliers, voire beaucoup plus !<br>
         <br>
         Mais attention, une grosse part de ces sites internet sont ou deviendront des arnaques où les membres inscrits perdront leur capital investi (on dit qu'ils scam).<br>
-        Et c'est la qu'on intervient! Et oui, même si cela est risqué, ca peut-être très rentable si on choisit bien et qu'on fait le bon investissement. <br>
-        Vous pourrez voir par vous memes sur les fiches de chaque site quelques sommes qu'on a pu gagner! Cela est possible pour vous aussi! <br><br>
-        Sur chaque fiche de détails, vous pourrez y voir une présentation de chaque site/entreprise ainsi que notre avis se basant sur plusieurs critères. <br>
-        Et vous pour vous aider, encore plus, nous avons aussi ajouté les sites que l'on a tester et qui n'ont pas fonctionné, ca vous éviter de tomber dans le piège!<br>
+        Et c'est là que j'interviens ! Et oui, même si cela est risqué, cela peut-être très rentable si on choisit bien et qu'on fait le bon investissement. <br>
+        Vous pourrez voir par vous même sur les fiches de chaque site quelques sommes que j'ai pu gagner ! C'est possible pour vous aussi ! <br><br>
+        Sur chaque fiche de détails, vous pourrez y voir une présentation de chaque site/entreprise ainsi que mon avis se basant sur plusieurs critères. <br>
+        Et vous pour vous aider encore plus, j'ai aussi ajouté les sites que j'ai testés et qui n'ont pas fonctionné, ça vous évitera de tomber dans le piège!<br>
 
         <br>
-        Nous vous conseillons de vous donner un capital investissement (qui est une somme que vous etes prêts à perdre!) et de diviser vos investissements sur plusieurs sites.
-        On vous indique meme le pourcentage de votre capital que nous pensons être le mieux pour chaque site.
+        Je vous conseille vivement de vous donner un capital investissement (qui est une somme que vous êtes prêts à perdre !) et de diviser vos investissements sur plusieurs sites.
+        Je vous indique même le pourcentage de votre capital que je pense être le mieux pour chaque site.
         <br><br>
       </p>
     </div>
     <br><br>
+  </div>
+  <div class="row">
+    <div class="w3-section w3-bottombar w3-padding-16" style="width: 100%">
+      <span class="w3-margin-right">TRI:</span>
+      <!-- <button class="w3-button w3-black">ALL</button> -->
+      <button class="w3-button w3-black" onclick="location.href='/hyips?sortBy=updatedAt'"><i class="fas fa-clock w3-margin-right"></i>Derniers ajoutés</button>
+      <button class="w3-button w3-white w3-hide-small" onclick="location.href='/hyips?sortBy=serious'"><i class="fas fa-shield-alt w3-margin-right"></i>Les + surs</button>
+      <button class="w3-button w3-white w3-hide-small" onclick="location.href='/hyips?sortBy=minimalDeposit'"><i class="fas fa-compress-arrows-alt w3-margin-right"></i>Petits dépôts</button>
+    </div>
   </div>
   <div class="row">
     {% for hyip in hyips %}
@@ -100,6 +109,8 @@
             <td>Parrainage: <span>{{hyip.sponsorship}}/5</span></td>
           </tr>
         </table>
+        Dépot minimal: {{ hyip.minimalDeposit }}$
+        <br>
         <br>
         <p>{{ hyip.truncatedPresentation }}</p>
       </div>

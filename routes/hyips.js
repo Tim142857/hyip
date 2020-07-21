@@ -23,18 +23,9 @@ var storage = multer.diskStorage({
 var upload = multer({ storage: storage })
 
 
-
-router.use((req, res, next) => {
-  res.locals = {
-    title: 'Tim & Joris - Les bons plans'
-  };
-  next();
-});
-
-
-/* HYIPS */
 router.get('/', function(req, res, next) {
-  managers.Hyip.findAll()
+  let sortBy = req.query.sortBy;
+  managers.Hyip.findAll(sortBy)
   .then(hyips => {
     hyips.forEach(hyip => {
       hyip.truncatedPresentation = clip(hyip.presentation, 200, { html: true })
@@ -54,5 +45,6 @@ router.get('/:id', function(req, res, next) {
     }
   })
 });
+
 
 module.exports = router;

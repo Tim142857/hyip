@@ -51,7 +51,7 @@ app.use(express.static(path.join(__dirname, 'uploads')));
 
 app.use((req, res, next) => {
   res.locals = {
-    title: 'Tim & Joris - Les bons plans',
+    title: 'Les bons plans de Tim',
     errorMessages: req.flash("error"),
     successMessages: req.flash("success"),
   };

@@ -1,9 +1,11 @@
 const Hyip = require('./hyip')
-const ImageHyip = require('./ImageHyip')
+const ImageHyip = require('./imageHyip')
 const Message = require('./message')
+const Post = require('./post')
 
 module.exports = {
   Hyip,
   ImageHyip,
-  Message
+  Message,
+  Post
 }
