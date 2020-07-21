@@ -30,7 +30,7 @@ router.get('/', function(req, res, next) {
     hyips.forEach(hyip => {
       hyip.truncatedPresentation = clip(hyip.presentation, 100, { html: true })
     })
-    res.render('hyips', { title: 'HYIPs', hyips });
+    res.render('hyips', { title: 'HYIPs', hyips, sortBy });
   })
 });
 

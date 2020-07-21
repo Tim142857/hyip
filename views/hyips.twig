@@ -78,9 +78,9 @@
     <div class="w3-section w3-bottombar w3-padding-16" style="width: 100%">
       <span class="w3-margin-right">TRI:</span>
       <!-- <button class="w3-button w3-black">ALL</button> -->
-      <button class="w3-button w3-black" onclick="location.href='/hyips?sortBy=updatedAt'"><i class="fas fa-clock w3-margin-right"></i>Derniers ajoutés</button>
-      <button class="w3-button w3-white w3-hide-small" onclick="location.href='/hyips?sortBy=serious'"><i class="fas fa-shield-alt w3-margin-right"></i>Les + surs</button>
-      <button class="w3-button w3-white w3-hide-small" onclick="location.href='/hyips?sortBy=minimalDeposit'"><i class="fas fa-compress-arrows-alt w3-margin-right"></i>Petits dépôts</button>
+      <button onclick="location.href='/hyips?sortBy=updatedAt'" class="w3-button {% if sortBy == "updatedAt" %}w3-black{% else %} w3-white {% endif %}"><i class="fas fa-clock w3-margin-right"></i>Derniers ajoutés</button>
+      <button onclick="location.href='/hyips?sortBy=serious'" class="w3-button {% if sortBy == "serious" %}w3-black{% else %} w3-white {% endif %}"><i class="fas fa-shield-alt w3-margin-right"></i>Les + surs</button>
+      <button onclick="location.href='/hyips?sortBy=minimalDeposit'" class="w3-button {% if sortBy == "minimalDeposit" %}w3-black{% else %} w3-white {% endif %}"><i class="fas fa-compress-arrows-alt w3-margin-right"></i>Petits dépôts</button>
     </div>
   </div>
   <div class="row">
