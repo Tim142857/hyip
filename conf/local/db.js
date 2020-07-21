@@ -10,7 +10,7 @@ if(process.env.NODE_ENV === "production"){
     dialect: 'mysql', // mariadb, mysql
     // DEV - display MySQL logs in stdout when true
     inspect: false,
-    sync: true
+    sync: false
   }
 } else {
   DBCONF = {
