@@ -9,7 +9,8 @@ if(process.env.NODE_ENV === "production"){
     password: '2e92cf4b',
     dialect: 'mysql', // mariadb, mysql
     // DEV - display MySQL logs in stdout when true
-    inspect: false
+    inspect: false,
+    sync: true
   }
 } else {
   DBCONF = {
@@ -20,7 +21,8 @@ if(process.env.NODE_ENV === "production"){
     password: 'password',
     dialect: 'mysql', // mariadb, mysql
     // DEV - display MySQL logs in stdout when true
-    inspect: false
+    inspect: false,
+    sync: true
   }
 }
 
