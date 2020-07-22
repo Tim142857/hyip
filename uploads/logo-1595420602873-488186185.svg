@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="207.618" height="47.752" viewBox="0 0 207.618 47.752">
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600|Poppins:400,500,600,700');
+</style>
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#01d0f2"/>
+      <stop offset="1" stop-color="#084ef3"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_1712" data-name="Group 1712" transform="translate(-323.735 -591.739)">
+    <path id="Path_1787" data-name="Path 1787" d="M357.155,630.892l-4.839,7.364-24.842-37.911,12.2-.053,16.315,25.059-1.221,1.883.011.019-1.259,1.888.006.009-1.215,1.874L334.934,604.15h2.4l14.942,23.062,1.284-1.743-15.125-23.344h-7.222l21.1,32.624,4.889-7.541,1.181,1.814-.028.043,1.246,1.813,21.1-32.614H363.975l-10.2,16.016,3.472,5.4,10.3-15.656h2.275L357.2,623.49l-16.426-25.229-17.038.074,28.579,43.613,6.029-9.175ZM373.547,602h-7.093l-9.191,13.967-1.087-1.69,8.911-13.986h11.888l-17.384,26.876-1.183-1.816Z" transform="translate(0 -2.456)" fill="url(#linear-gradient)"/>
+    <text id="Viqai" transform="translate(389.353 623.739)" fill="#fff" font-size="25" font-family="Poppins" font-weight="500"><tspan x="0" y="0">VIQAI.COM</tspan></text>
+  </g>
+</svg>
