@@ -13,6 +13,7 @@
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "express-session": "^1.17.1",
+    "express-winston": "^4.0.4",
     "http-errors": "~1.6.3",
     "lodash": "^4.17.15",
     "mariadb": "^2.4.1",
@@ -29,7 +30,8 @@
     "sequelize": "^6.3.0",
     "sequelize-fixtures": "^1.2.0",
     "text-clipper": "^2.1.0",
-    "twig": "~0.10.3"
+    "twig": "~0.10.3",
+    "winston": "^3.3.3"
   },
   "devDependencies": {
     "kill-port": "^1.6.0",

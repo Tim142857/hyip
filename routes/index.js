@@ -40,9 +40,4 @@ router.get('/contact', function(req, res, next) {
 });
 
 
-/* 404 */
-router.get('*', function(req, res, next) {
-  res.redirect('/')
-});
-
 module.exports = router;

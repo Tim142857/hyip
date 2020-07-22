@@ -5,6 +5,8 @@ const managers = require('../managers')
 const models = require('../models');
 const clip = require("text-clipper").default;
 const Middlewares = require('../middlewares');
+const { Logger } = require('../services')
+const logger = new Logger('app');
 
 const multer = require('multer');
 // SET STORAGE
@@ -39,7 +41,9 @@ router.get('/:id', function(req, res, next) {
   managers.Hyip.findOneById(id)
   .then(hyip => {
     if(!hyip){
-      res.redirect('/hyips')
+      res.status(404);
+      next();
+      // res.redirect('/hyips')
     } else {
       res.render('hyip_details', { title: hyip.name, hyip });
     }
