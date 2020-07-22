@@ -63,7 +63,7 @@
   </div>
   <div class="row">
     <div class="w3-section w3-bottombar w3-padding-16" style="width: 100%">
-      <span class="w3-margin-right">TRI:</span>
+      <span class="w3-margin-right"><b>TRI</b> :</span>
       <!-- <button class="w3-button w3-black">ALL</button> -->
       <button onclick="location.href='/hyips?sortBy=updatedAt'" class="w3-button {% if sortBy == "updatedAt" %}w3-black{% else %} w3-white {% endif %}"><i class="fas fa-clock w3-margin-right"></i>Derniers ajoutés</button>
       <button onclick="location.href='/hyips?sortBy=serious'" class="w3-button {% if sortBy == "serious" %}w3-black{% else %} w3-white {% endif %}"><i class="fas fa-shield-alt w3-margin-right"></i>Les + surs</button>
@@ -102,7 +102,7 @@
           </tr>
           <tr>
             <td style="text-align: center;font-weight:bold;background-color:{% if hyip.payeur %}#68FF33{% else %}#FF5533{% endif %}">
-              {% if hyip.payeur %}PAYES BIEN !{% else %}NE PAYES PAS !{% endif %}
+              {% if hyip.payeur %}PAYE BIEN !{% else %}NE PAYE PAS !{% endif %}
             </td>
           </tr>
         </table>
