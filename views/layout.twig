@@ -49,6 +49,19 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
   <div class="w3-main" style="margin-left:300px">
     {% block header %}{% endblock %}
+    <header id="portfolio">
+      <a href="#"><img src="/images/hyip_banniere.png" style="width:120px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+      <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+      <div class="w3-container">
+        <!-- <div class="w3-section w3-bottombar w3-padding-16">
+        <span class="w3-margin-right">Filtre:</span>
+        <button class="w3-button w3-black">ALL</button>
+        <button class="w3-button w3-white"><i class="fa fa-diamond w3-margin-right"></i>Les + sures</button>
+        <button class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>Petits dépots</button>
+        <button class="w3-button w3-white w3-hide-small"><i class="fa fa-map-pin w3-margin-right"></i>Meilleurs risques/rewards</button>
+      </div> -->
+    </div>
+    </header>
 
     <!-- FLASH MESSAGES -->
     {% if errorMessages %}
@@ -69,7 +82,38 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
     {% block body %}{% endblock %}
 
+    <!-- Contact Section -->
+    <div class="w3-container w3-padding-large w3-grey">
+      <!-- <h4 id="contact"><b>Contactez nous</b></h4> -->
+      <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
+        <p style="font-weight: bold; font-style: italic; font-size:20px">
+          Une question? <br>
+          Une proposition? <br>
+          Des remarques sur le site? <br>
+          Un bon plan à me faire tester?<br><br>
 
+          Ecris-moi!
+        </p>
+
+
+      </div>
+      <hr class="w3-opacity">
+      <form action="/send-message" method="POST">
+        <div class="w3-section">
+          <label>Nom</label>
+          <input class="w3-input w3-border" type="text" name="name" required>
+        </div>
+        <div class="w3-section">
+          <label>Email</label>
+          <input class="w3-input w3-border" type="text" name="mail" required>
+        </div>
+        <div class="w3-section">
+          <label>Message</label>
+          <textarea class="w3-input w3-border" type="text" name="content" required></textarea>
+        </div>
+        <button type="submit" class="w3-button w3-black w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Envoyer</button>
+      </form>
+    </div>
 
 
     <!-- Footer -->
