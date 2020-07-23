@@ -152,5 +152,21 @@
       "password": "12345",
       "role": "member"
     }
+  },
+  {
+    "model":  "Message",
+    "data": {
+      "name": "User 1",
+      "mail": "user1@test.fr",
+      "content": "Trop bien ce site!"
+    }
+  },
+  {
+    "model":  "Message",
+    "data": {
+      "name": "User 2",
+      "mail": "user2@test.fr",
+      "content": "cool Raoul"
+    }
   }
 ]

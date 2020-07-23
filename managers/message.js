@@ -8,6 +8,11 @@ const create = function(body){
   })
 }
 
+const findAll = function(){
+  return Message.findAll()
+}
+
 module.exports = {
-  create
+  create,
+  findAll
 }

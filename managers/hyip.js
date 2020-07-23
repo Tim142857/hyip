@@ -18,7 +18,6 @@ const findOneById = function(id){
   return Hyip.findOne({ include: { model: ImageHyip, as: 'images' }, where: {id} });
 }
 const insert = function(hyip){
-  console.log('insert hyip: ', hyip)
   return Hyip.create(hyip);
 }
 const edit = function(newHyip){

@@ -3,25 +3,46 @@
 <br><br>
 <div class="container">
   <div class="row">
-    <h2>HYIPS   <a href="admin/hyip/create"><i class="fa fa-plus"></i></a></h2>
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>Nom</th>
-          <th>Modifier</th>
-          <th>Supprimer</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for hyip in hyips %}
-        <tr>
-          <td>{{ hyip.name }}</td>
-          <td><a href="admin/hyip/edit/{{hyip.id}}"><i class="fa fa-edit"></i></a></td>
-          <td><a href="admin/hyip/delete/{{hyip.id}}"><i class="fa fa-trash"></i></a></td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
+    <a href="/" style="font-size:3rem; margin-bottom: 30px"><i class="fa fa-compass fa-10x"></i></a>
+  </div>
+  <div class="row">
+    <div class="col">
+      <h2>HYIPS      <a href="admin/hyip/create"><i class="fa fa-plus"></i></a></h2>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Voir</th>
+            <th>Modifier</th>
+            <th>Supprimer</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for hyip in hyips %}
+          <tr>
+            <td>{{ hyip.name }}</td>
+            <td><a href="hyips/{{hyip.id}}"><i class="fa fa-eye"></i></a></td>
+            <td><a href="admin/hyip/edit/{{hyip.id}}"><i class="fa fa-edit"></i></a></td>
+            <td><a href="admin/hyip/delete/{{hyip.id}}"><i class="fa fa-trash"></i></a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <br><br>
+      <h2>MESSAGES</h2>
+      <br><br>
+      {% for message in messages %}
+      <div>
+        Nom: {{ message.name }}<br>
+        Mail: {{ message.mail }}<br>
+        Message: {{ message.content }}<br><br><br>
+      </div>
+      {% endfor %}
+    </div>
   </div>
 </div>
 {% endblock %}

@@ -69,18 +69,19 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'uploads')));
 
+app.use(passport.initialize());
+app.use(passport.session());
+
 app.use((req, res, next) => {
   logger.info("Request received at \""  + req.url + "\"")
   res.locals = {
     title: 'Les bons plans de Tim',
     errorMessages: req.flash("error"),
     successMessages: req.flash("success"),
+    user: req.user
   };
   next();
 });
-
-app.use(passport.initialize());
-app.use(passport.session());
 
 
 app.use('/users', usersRouter);

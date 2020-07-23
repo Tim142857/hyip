@@ -22,9 +22,12 @@ var upload = multer({ storage: storage })
 
 
 router.get('/', function(req, res, next) {
-  managers.Hyip.findAll()
-  .then(hyips => {
-    res.render('admin/homepage', { hyips })
+  Promise.all([
+    managers.Hyip.findAll(),
+    managers.Message.findAll()
+  ])
+  .then(values => {
+    res.render('admin/homepage', { hyips: values[0], messages: values[1] })
   })
 });
 

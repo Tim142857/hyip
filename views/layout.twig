@@ -35,6 +35,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
       <a href="/hyips" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fas fa-dollar-sign fa-fw w3-margin-right"></i>HYIPS</a>
       <a href="/immobilier" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fas fa-building fa-fw w3-margin-right"></i>IMMOBILIER</a>
       <a href="/trading" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fas fa-hand-holding-usd fa-fw w3-margin-right"></i>TRADING</a>
+      {% if user %}
+      {% if user.role == "admin" %}
+      <a href="/admin" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fas fa-user-shield fa-fw w3-margin-right"></i>ADMIN</a>
+      {% endif %}
+      {% endif %}
     </div>
     <div class="w3-panel w3-large" style="display:none">
       <i class="fab fa-facebook-official w3-hover-opacity"></i>
@@ -67,83 +72,83 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
         <button class="w3-button w3-white w3-hide-small"><i class="fa fa-map-pin w3-margin-right"></i>Meilleurs risques/rewards</button>
       </div> -->
     </div>
-    </header>
+  </header>
 
-    <!-- FLASH MESSAGES -->
-    {% if errorMessages %}
-    {% for error in errorMessages %}
-    <div class="alert alert-warning" role="alert">
-      {{error}}
+  <!-- FLASH MESSAGES -->
+  {% if errorMessages %}
+  {% for error in errorMessages %}
+  <div class="alert alert-warning" role="alert">
+    {{error}}
+  </div>
+  {% endfor %}
+  {% endif %}
+  {% if successMessages %}
+  {% for success in successMessages %}
+  <div class="alert alert-success" role="alert">
+    {{success}}
+  </div>
+  {% endfor %}
+  {% endif %}
+
+
+  {% block body %}{% endblock %}
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-large w3-grey">
+    <!-- <h4 id="contact"><b>Contactez nous</b></h4> -->
+    <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
+      <p style="font-weight: bold; font-style: italic; font-size:20px">
+        Une question? <br>
+        Une proposition? <br>
+        Des remarques sur le site? <br>
+        Un bon plan à me faire tester?<br><br>
+
+        Ecris-moi!
+      </p>
+
+
     </div>
-    {% endfor %}
-    {% endif %}
-    {% if successMessages %}
-    {% for success in successMessages %}
-    <div class="alert alert-success" role="alert">
-      {{success}}
-    </div>
-    {% endfor %}
-    {% endif %}
-
-
-    {% block body %}{% endblock %}
-
-    <!-- Contact Section -->
-    <div class="w3-container w3-padding-large w3-grey">
-      <!-- <h4 id="contact"><b>Contactez nous</b></h4> -->
-      <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
-        <p style="font-weight: bold; font-style: italic; font-size:20px">
-          Une question? <br>
-          Une proposition? <br>
-          Des remarques sur le site? <br>
-          Un bon plan à me faire tester?<br><br>
-
-          Ecris-moi!
-        </p>
-
-
+    <hr class="w3-opacity">
+    <form action="/send-message" method="POST">
+      <div class="w3-section">
+        <label>Nom</label>
+        <input class="w3-input w3-border" type="text" name="name" required>
       </div>
-      <hr class="w3-opacity">
-      <form action="/send-message" method="POST">
-        <div class="w3-section">
-          <label>Nom</label>
-          <input class="w3-input w3-border" type="text" name="name" required>
-        </div>
-        <div class="w3-section">
-          <label>Email</label>
-          <input class="w3-input w3-border" type="text" name="mail" required>
-        </div>
-        <div class="w3-section">
-          <label>Message</label>
-          <textarea class="w3-input w3-border" type="text" name="content" required></textarea>
-        </div>
-        <button type="submit" class="w3-button w3-black w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Envoyer</button>
-      </form>
-    </div>
+      <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input w3-border" type="text" name="mail" required>
+      </div>
+      <div class="w3-section">
+        <label>Message</label>
+        <textarea class="w3-input w3-border" type="text" name="content" required></textarea>
+      </div>
+      <button type="submit" class="w3-button w3-black w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Envoyer</button>
+    </form>
+  </div>
 
 
-    <!-- Footer -->
-    <footer class="w3-container w3-padding-32 w3-dark-grey">
-      <div class="w3-row-padding">
-        <!-- <div class="w3-third">
-        <h3>FOOTER</h3>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-      </div> -->
-
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-dark-grey">
+    <div class="w3-row-padding">
       <!-- <div class="w3-third">
-      <h3>BLOG POSTS</h3>
-      <ul class="w3-ul w3-hoverable">
-      <li class="w3-padding-16">
-      <img src="/w3images/workshop.jpg" class="w3-left w3-margin-right" style="width:50px">
-      <span class="w3-large">Lorem</span><br>
-      <span>Sed mattis nunc</span>
-    </li>
+      <h3>FOOTER</h3>
+      <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </div> -->
+
+    <!-- <div class="w3-third">
+    <h3>BLOG POSTS</h3>
+    <ul class="w3-ul w3-hoverable">
     <li class="w3-padding-16">
-    <img src="/w3images/gondol.jpg" class="w3-left w3-margin-right" style="width:50px">
-    <span class="w3-large">Ipsum</span><br>
-    <span>Praes tinci sed</span>
+    <img src="/w3images/workshop.jpg" class="w3-left w3-margin-right" style="width:50px">
+    <span class="w3-large">Lorem</span><br>
+    <span>Sed mattis nunc</span>
   </li>
+  <li class="w3-padding-16">
+  <img src="/w3images/gondol.jpg" class="w3-left w3-margin-right" style="width:50px">
+  <span class="w3-large">Ipsum</span><br>
+  <span>Praes tinci sed</span>
+</li>
 </ul>
 </div> -->
 
