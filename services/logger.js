@@ -10,7 +10,8 @@ class LoggerService {
       transports: [
         new winston.transports.File({
           filename: `./logs/${route}.log`
-        })
+        }),
+        new winston.transports.Console()
       ],
       format: winston.format.printf((info) => {
         let message = `${dateFormat()} | ${info.level.toUpperCase()} | ${route}.log | ${info.message} | `
