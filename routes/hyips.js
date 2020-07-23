@@ -43,7 +43,6 @@ router.get('/:id', function(req, res, next) {
     if(!hyip){
       res.status(404);
       next();
-      // res.redirect('/hyips')
     } else {
       res.render('hyip_details', { title: hyip.name, hyip });
     }
