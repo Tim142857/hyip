@@ -39,6 +39,6 @@
     "nodemon": "^2.0.4"
   },
   "nodemonConfig": {
-    "ext": "js, html, twig"
+    "ext": "js, html, twig, json"
   }
 }

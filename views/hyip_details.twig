@@ -57,19 +57,19 @@ img{
 
       <table class="table table-borderless">
         <tr>
-          <th scope="row">Serieux</th>
+          <th scope="row">{{ __('HYIP.SERIOUS') }}</th>
           <td>{{ getStars(hyip.serious,5) }}</td>
         </tr>
         <tr>
-          <th scope="row">Rentabilité</th>
+          <th scope="row">{{ __('HYIP.PROFITABILITY') }}</th>
           <td>{{ getStars(hyip.profitability,5) }}</td>
         </tr>
         <tr>
-          <th scope="row">Simplicité</th>
+          <th scope="row">{{ __('HYIP.SIMPLICITY') }}</th>
           <td>{{ getStars(hyip.simplicity,5) }}</td>
         </tr>
         <tr>
-          <th scope="row">Parrainage</th>
+          <th scope="row">{{ __('HYIP.SPONSORSHIP') }}</th>
           <td>{{ getStars(hyip.sponsorship,5) }}</td>
         </tr>
       </table>
@@ -77,34 +77,34 @@ img{
     <div class="col-sm"><table class="table table-dark table-infos">
       <tbody>
         <tr>
-          <th scope="row">Nom</th>
+          <th scope="row">{{ __('HYIP.NAME') }}</th>
           <td>{{ hyip.name }}</td>
         </tr>
         <tr>
-          <th scope="row">Statut</th>
+          <th scope="row">{{ __('HYIP.STATUS') }}</th>
           <td style="text-align: center;font-weight:bold;background-color:{% if hyip.payeur %}#68FF33{% else %}#FF5533{% endif %}">
-            {% if hyip.payeur %}PAYE BIEN !{% else %}NE PAYE PAS !{% endif %}
+            {% if hyip.payeur %}{{ __('HYIP.PAYING') }}{% else %}{{ __('HYIP.NOT_PAYING') }}{% endif %}
           </td>
         </tr>
         <tr>
-          <th scope="row">Lien</th>
-          <td><a id="lien" href="{{ hyip.url }}" target="_blank">Inscription</a></td>
+          <th scope="row">{{ __('HYIP.LINK') }}</th>
+          <td><a id="lien" href="{{ hyip.url }}" target="_blank">{{ __('HYIP.REGISTER') }}</a></td>
         </tr>
         <tr>
-          <th scope="row">Dépot minimal</th>
+          <th scope="row">{{ __('HYIP.MINIMAL_DEPOSIT') }}</th>
           <td>{{ hyip.minimalDeposit }}$</td>
         </tr>
         <tr>
-          <th scope="row">Méthodes de dépot</th>
+          <th scope="row">{{ __('HYIP.DEPOSIT_METHODS') }}</th>
           <td>{{ hyip.modesDepot }}</td>
         </tr>
         <tr>
-          <th scope="row">Méthodes de retrait</th>
+          <th scope="row">{{ __('HYIP.WITHDRAW_METHODS') }}</th>
           <td>{{ hyip.modesRetrait }}</td>
         </tr>
         <tr>
-          <th scope="row">Investissement conseillé</th>
-          <td>{{ hyip.percentage }}% du capital</td>
+          <th scope="row">{{ __('HYIP.PERCENTAGE') }}</th>
+          <td>{{ hyip.percentage }}% {{ __('HYIP.OF_CAPITAL') }}</td>
         </tr>
       </tbody>
     </table>
@@ -113,35 +113,35 @@ img{
 
 <div class="row bloc">
   <div class="col-sm">
-    <h2>Présentation</h2>
+    <h2>{{ __('HYIP.PRESENTATION') }}</h2>
     {{ hyip.presentation }}
   </div>
 </div>
 
 <div class="row bloc">
   <div class="col-sm">
-    <h2>Plans</h2>
+    <h2>{{ __('HYIP.PLANS') }}</h2>
     {{ hyip.plans }}
   </div>
 </div>
 
 <div class="row bloc">
   <div class="col-sm">
-    <h2>Affiliation</h2>
+    <h2>{{ __('HYIP.AFFILIATION') }}</h2>
     {{ hyip.affiliation }}
   </div>
 </div>
 
 <div class="row bloc">
   <div class="col-sm">
-    <h2>Notre avis</h2>
+    <h2>{{ __('HYIP.OPINION') }}</h2>
     {{ hyip.avis }}
   </div>
 </div>
 
 <div class="row bloc">
   <div class="col-sm">
-    <h2>Preuves de paiement</h2>
+    <h2>{{ __('HYIP.PAYMENT_PROOFS') }}</h2>
   </div>
 </div>
 <div class="row bloc">

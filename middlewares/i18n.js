@@ -11,6 +11,9 @@ i18n.configure({
 
   // sets a custom cookie name to parse locale settings from  - defaults to NULL
   cookie: 'lang',
+
+  //nested json files
+  objectNotation: true
 });
 
 module.exports = function(req, res, next) {

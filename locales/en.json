@@ -1,3 +1,56 @@
 {
-	"Hello i18n": "Hello i18n"
+	"404": {
+		"RESSOURCE_NOT_FOUND": "Ressource not found !",
+		"DISCOVER_LAST_TIPS": "I suggest you discover my latest tips :",
+		"THIS_WAY": "It's the way !",
+		"HOMEPAGE": "Accueil"
+	},
+	"500": {
+		"ERROR_OCCURED": "Une erreur s'est produite !",
+		"DISCOVER_LAST_TIPS": "je te propose de découvrir mes derniers bons plans :",
+		"THIS_WAY": "C'est par ici !",
+		"HOMEPAGE": "Homepage"
+	},
+	"HYIP": {
+		"SERIOUS": "Serious",
+		"PROFITABILITY": "Profitability",
+		"SIMPLICITY": "Simplicity",
+		"SPONSORSHIP": "Sponsorship",
+		"NAME": "HYIP.NAME",
+		"STATUS": "Status",
+		"PAYING": "PAYING !",
+		"NOT_PAYING": "NOT PAYING !",
+		"LINK": "Link",
+		"REGISTER": "Register",
+		"MINIMAL_DEPOSIT": "Minimal deposit",
+		"DEPOSIT_METHODS": "Deposit methods",
+		"WITHDRAW_METHODS": "Withdraw methods",
+		"PERCENTAGE": "Recommended investment",
+		"OF_CAPITAL": "of capital",
+		"PRESENTATION": "Presentation",
+		"PLANS": "Plans",
+		"AFFILIATION": "Affiliation",
+		"OPINION": "My opinion",
+		"PAYMENT_PROOFS": "Proofs of payment / more images"
+	},
+	"HYIPS_PAGE": {
+		"NEW_HERE": "New here ? Need more infos about <b>HYIP</b> ? Click here ",
+		"DEFINITION": {
+			"PART_ONE": "<span>High Yield Investment Program</span>, HYIP are (really) high yield financial programs",
+			"PART_TWO": "If you get used to your interest at 0.5% per year from your bank, you might quickly hallucinate.",
+			"PART_THREE": "Most of these programs offer 1% daily interest, or even a lot more!",
+			"PART_FOUR": "But beware, a large part of these websites are or will become scams where registered members will lose their invested capital .",
+			"PART_FIVE": "And that's where I come in! And yes, even if it is risky, it can be very profitable if you choose well and make the right investment.",
+			"PART_SIX": "You will be able to see for yourself on the sheets of each site some sums that I was able to win! It's possible for you too!",
+			"PART_SEVEN": "On each details sheet, you will be able to see a presentation of each site / company as well as my opinion based on several criteria.",
+			"PART_HEIGHT": "And to help you even more, I also added the sites that I tested and which did not work, that will prevent you to be trapped!",
+			"PART_NINE": "I strongly advise you to give yourself a private equity (which is an amount that you are ready to lose!) And to divide your investments on several sites. <br> I even indicate to you the percentage of your capital that I think is the best for each site."
+		},
+		"SORT":{
+			"SORT": "SORT",
+			"LAST_CREATED": "Last added",
+			"SAFEST": "The safest",
+			"SMALL_DEPOSIT": "Small deposit"
+		}
+	}
 }

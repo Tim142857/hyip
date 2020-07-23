@@ -2,15 +2,15 @@
 {% block body %}
 <div class="row">
   <div class="col" style="margin: 50px">
-    Une erreur s'est produite !<br><br><br>
+    {{ __('500.ERROR_OCCURED') }}<br><br><br>
 
-    En attendant, je te propose de découvrir mes derniers bons plans:<br><br>
+    {{ __('500.DISCOVER_LAST_TIPS') }}<br><br>
 
-    <a href="/hyips"> C'est par ici ! </a>
+    <a href="/hyips">{{ __('500.THIS_WAY') }}</a>
 
     <br><br><br><br><br>
 
-    <a href="/">Retour à l'accueil</a>
+    <a href="/">{{ __('500.HOMEPAGE') }}</a>
   </div>
 </div>
 {% endblock %}

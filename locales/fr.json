@@ -1,3 +1,56 @@
 {
-	"Hello i18n": "Bonjour i18n"
+	"404": {
+		"RESSOURCE_NOT_FOUND": "Ressource non trouvée !",
+		"DISCOVER_LAST_TIPS": "je te propose de découvrir mes derniers bons plans :",
+		"THIS_WAY": "C'est par ici !",
+		"HOMEPAGE": "Homepage"
+	},
+	"500": {
+		"ERROR_OCCURED": "Une erreur s'est produite !",
+		"DISCOVER_LAST_TIPS": "je te propose de découvrir mes derniers bons plans :",
+		"THIS_WAY": "C'est par ici !",
+		"HOMEPAGE": "Homepage"
+	},
+	"HYIP": {
+		"SERIOUS": "Serieux",
+		"PROFITABILITY": "Rentabilité",
+		"SIMPLICITY": "Simplicité",
+		"SPONSORSHIP": "Parrainage",
+		"NAME": "Nom",
+		"STATUS": "Statut",
+		"PAYING": "PAYE !",
+		"NOT_PAYING": "NE PAYE PAS !",
+		"LINK": "Lien",
+		"REGISTER": "Inscription",
+		"MINIMAL_DEPOSIT": "Dépôt minimal",
+		"DEPOSIT_METHODS": "Méthôdes de dépôt",
+		"WITHDRAW_METHODS": "Méthôdes de retrait",
+		"PERCENTAGE": "Investissement conseillé",
+		"OF_CAPITAL": "Du capital",
+		"PRESENTATION": "Présentation",
+		"PLANS": "Plans",
+		"AFFILIATION": "Affiliation",
+		"OPINION": "Mon avis",
+		"PAYMENT_PROOFS": "Preuves de paiement / Images"
+	},
+	"HYIPS_PAGE": {
+		"NEW_HERE": "Nouveau dans la section ? Besoin de plus d'infos sur les <b>HYIP</b> ? Cliques ici ",
+		"DEFINITION": {
+			"PART_ONE": "Programmes d'investissement à haut rendement ou en anglais <span>High Yield Investment Program</span>, les HYIP sont des programmes avec des (très) gros rendements.",
+			"PART_TWO": "Si tu t'es habitué à tes 0.5 % annuels du PEL de ta banque, tu risques de vite halluciner.",
+			"PART_THREE": "La plupart de ces programmes proposent 1 % d'intérêts journaliers, voire beaucoup plus !",
+			"PART_FOUR": "Mais attention, une grosse part de ces sites internet sont ou deviendront des arnaques où les membres inscrits perdront leur capital investi (on dit qu'ils scam).",
+			"PART_FIVE": "Et c'est là que j'interviens ! Et oui, même si cela est risqué, cela peut-être très rentable si on choisit bien et qu'on fait le bon investissement.",
+			"PART_SIX": "Vous pourrez voir par vous même sur les fiches de chaque site quelques sommes que j'ai pu gagner ! C'est possible pour vous aussi !",
+			"PART_SEVEN": "Sur chaque fiche de détails, vous pourrez y voir une présentation de chaque site/entreprise ainsi que mon avis se basant sur plusieurs critères.",
+			"PART_HEIGHT": "Et pour vous aider encore plus, j'ai aussi ajouté les sites que j'ai testés et qui n'ont pas fonctionné, ça vous évitera de tomber dans le piège!",
+			"PART_NINE": "Je vous conseille vivement de vous donner un capital investissement (qui est une somme que vous êtes prêts à perdre !) et de diviser vos investissements sur plusieurs sites.<br>Je vous indique même le pourcentage de votre capital que je pense être le mieux pour chaque site."
+		},
+		"SORT":{
+			"SORT": "TRI",
+			"LAST_CREATED": "Derniers ajoutés",
+			"SAFEST": "Les + sûrs",
+			"SMALL_DEPOSIT": "Petits dépôts"
+		}
+	}
 }

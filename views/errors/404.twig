@@ -2,15 +2,15 @@
 {% block body %}
 <div class="row">
   <div class="col" style="margin: 50px">
-    Ressource non trouvée !<br><br><br>
+    {{ __('404.RESSOURCE_NOT_FOUND') }}<br><br><br>
 
-    En attendant, je te propose de découvrir mes derniers bons plans:<br><br>
+    {{ __('404.DISCOVER_LAST_TIPS') }}<br><br>
 
-    <a href="/hyips"> C'est par ici ! </a>
+    <a href="/hyips">{{ __('404.THIS_WAY') }}</a>
 
     <br><br><br><br><br>
 
-    <a href="/">Retour à l'accueil</a>
+    <a href="/">{{ __('404.HOMEPAGE') }}</a>
   </div>
 </div>
 {% endblock %}
