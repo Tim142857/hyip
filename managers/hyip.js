@@ -1,7 +1,7 @@
 const DAL = require('../dal')
 const { Hyip, ImageHyip } = require('../models')
 
-const findAll = function(sortBy = "updatedAt"){
+const findAll = function(sortBy = "serious"){
   let possiblesSortBy = ["updatedAt", "minimalDeposit", "serious"]
   let order = sortBy === "minimalDeposit" ? 'ASC' : 'DESC';
   if(possiblesSortBy.includes(sortBy)){

@@ -55,19 +55,23 @@ const Hyip = sequelize.define('hyip', {
   },
   presentation: {
     type: Sequelize.TEXT,
-    required: true
+    required: true,
+    i18n: true
   },
   plans: {
     type: Sequelize.TEXT,
-    required: true
+    required: true,
+    i18n: true
   },
   affiliation: {
     type: Sequelize.TEXT,
-    required: true
+    required: true,
+    i18n: true
   },
   avis: {
     type: Sequelize.TEXT,
-    required: true
+    required: true,
+    i18n: true
   },
 
 }, {
