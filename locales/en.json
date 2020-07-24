@@ -46,11 +46,52 @@
 			"PART_HEIGHT": "And to help you even more, I also added the sites that I tested and which did not work, that will prevent you to be trapped!",
 			"PART_NINE": "I strongly advise you to give yourself a private equity (which is an amount that you are ready to lose!) And to divide your investments on several sites. <br> I even indicate to you the percentage of your capital that I think is the best for each site."
 		},
-		"SORT":{
+		"SORT": {
 			"SORT": "SORT",
 			"LAST_CREATED": "Last added",
 			"SAFEST": "The safest",
 			"SMALL_DEPOSIT": "Small deposit"
 		}
+	},
+	"INDEX": {
+		"ABOUT_ME": "About me",
+		"PART_ONE": "In search of <b> financial freedom </b>, I am a young active 30 years old looking for good deals on the Internet to earn money and in particular passive income",
+		"PART_TWO": "This site was designed to share all my tips and advice. Unlike some other sites, I test all that I offer beforehand. And I share with you both my successes and my unsuccessful attempts.",
+		"PART_THREE": "At the moment I'm very interested in <b> HYIP </b> (High Yield Investment Program) type sites, but I intend to diversify by investing in real estate and trading.",
+		"PART_FOUR": "My goal is to develop a supportive community, if you want to participate, do not hesitate to:",
+		"PART_FIVE": "<b> Comment </b> my different articles",
+		"PART_SIX": "<b>Test</b> and give feedback on my tips",
+		"PART_SEVEN": "<b>Share </b> this site and the articles around you",
+		"PART_HEIGHT": "<b> Suggest </b> me plans to test"
+	},
+	"IN_PREPARATION": {
+		"IN_PREPARATION": "Page en cours de création ... Un peu de patience :)"
+	},
+	"LAYOUT": {
+		"GOOD_PLANS": "The good plans",
+		"MENU": {
+			"BLOG": "BLOG",
+			"HYIPS": "HYIPS",
+			"REAL_ESTATE": "REAL ESTATE",
+			"TRADING": "TRADING",
+			"ADMIN": "ADMIN"
+		},
+		"FOOTER": {
+			"QUESTION": "Any question",
+			"PROPOSITION": "Any suggestion",
+			"NOTICE": "Any notices for the site",
+			"PLAN": "A good plan to give me to test",
+			"WRITE_ME": "Contact me",
+			"NAME": "NAME",
+			"EMAIL": "EMAIL",
+			"CONTENT": "MESSAGE",
+			"SEND": "SEND",
+			"MESSAGE": "LAYOUT.FOOTER.MESSAGE"
+		}
+	},
+	"LOGIN":{
+		"LOGIN": "Login",
+		"USERNAME": "Username",
+		"PASSWORD": "Password"
 	}
 }

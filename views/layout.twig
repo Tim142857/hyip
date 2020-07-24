@@ -28,16 +28,16 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
         <i class="fa fa-remove"></i>
       </a>
       <a href='/'><img src="/images/hyip_banniere.png" style="width:100%;" class="w3-round"><br><br></a>
-      <h4><b>Les bons plans</b></h4>
+      <h4><b>{{ __('LAYOUT.GOOD_PLANS') }}</b></h4>
     </div>
     <div class="w3-bar-block">
-      <a href="/blog" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fas fa-book fa-fw w3-margin-right"></i>BLOG</a>
-      <a href="/hyips" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fas fa-dollar-sign fa-fw w3-margin-right"></i>HYIPS</a>
-      <a href="/immobilier" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fas fa-building fa-fw w3-margin-right"></i>IMMOBILIER</a>
-      <a href="/trading" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fas fa-hand-holding-usd fa-fw w3-margin-right"></i>TRADING</a>
+      <a href="/blog" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fas fa-book fa-fw w3-margin-right"></i>{{ __('LAYOUT.MENU.BLOG') }}</a>
+      <a href="/hyips" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fas fa-dollar-sign fa-fw w3-margin-right"></i>{{ __('LAYOUT.MENU.HYIPS') }}</a>
+      <a href="/immobilier" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fas fa-building fa-fw w3-margin-right"></i>{{ __('LAYOUT.MENU.REAL_ESTATE') }}</a>
+      <a href="/trading" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fas fa-hand-holding-usd fa-fw w3-margin-right"></i>{{ __('LAYOUT.MENU.TRADING') }}</a>
       {% if user %}
       {% if user.role == "admin" %}
-      <a href="/admin" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fas fa-user-shield fa-fw w3-margin-right"></i>ADMIN</a>
+      <a href="/admin" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fas fa-user-shield fa-fw w3-margin-right"></i>{{ __('LAYOUT.MENU.ADMIN') }}</a>
       {% endif %}
       {% endif %}
     </div>
@@ -98,12 +98,12 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <!-- <h4 id="contact"><b>Contactez nous</b></h4> -->
     <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
       <p style="font-weight: bold; font-style: italic; font-size:20px">
-        Une question? <br>
-        Une proposition? <br>
-        Des remarques sur le site? <br>
-        Un bon plan à me faire tester?<br><br>
+        {{ __('LAYOUT.FOOTER.QUESTION') }} ?<br>
+        {{ __('LAYOUT.FOOTER.PROPOSITION') }} ? <br>
+        {{ __('LAYOUT.FOOTER.NOTICE') }} ? <br>
+        {{ __('LAYOUT.FOOTER.PLAN') }} ?<br><br>
 
-        Ecris-moi!
+        {{ __('LAYOUT.FOOTER.WRITE_ME') }}
       </p>
 
 
@@ -111,18 +111,18 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <hr class="w3-opacity">
     <form action="/send-message" method="POST">
       <div class="w3-section">
-        <label>Nom</label>
+        <label>{{ __('LAYOUT.FOOTER.NAME') }}</label>
         <input class="w3-input w3-border" type="text" name="name" required>
       </div>
       <div class="w3-section">
-        <label>Email</label>
+        <label>{{ __('LAYOUT.FOOTER.EMAIL') }}</label>
         <input class="w3-input w3-border" type="text" name="mail" required>
       </div>
       <div class="w3-section">
-        <label>Message</label>
+        <label>{{ __('LAYOUT.FOOTER.CONTENT') }}</label>
         <textarea class="w3-input w3-border" type="text" name="content" required></textarea>
       </div>
-      <button type="submit" class="w3-button w3-black w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Envoyer</button>
+      <button type="submit" class="w3-button w3-black w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>{{ __('LAYOUT.FOOTER.SEND') }}</button>
     </form>
   </div>
 

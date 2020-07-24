@@ -92,12 +92,12 @@
         </a>
         <table class="table table-borderless" id="notes">
           <tr>
-            <td>Serieux: <span>{{hyip.serious}}/5</span></td>
-            <td>Rentabilité: <span>{{hyip.profitability}}/5</span></td>
+            <td>{{ __('HYIP.SERIOUS') }}: <span>{{hyip.serious}}/5</span></td>
+            <td>{{ __('HYIP.PROFITABILITY') }}: <span>{{hyip.profitability}}/5</span></td>
           </tr>
           <tr>
-            <td>Simplicité: <span>{{hyip.simplicity}}/5</span></td>
-            <td>Parrainage: <span>{{hyip.sponsorship}}/5</span></td>
+            <td>{{ __('HYIP.SIMPLICITY') }}: <span>{{hyip.simplicity}}/5</span></td>
+            <td>{{ __('HYIP.SPONSORSHIP') }}: <span>{{hyip.sponsorship}}/5</span></td>
           </tr>
         </table>
         <table class="table table-borderless">
@@ -106,7 +106,7 @@
           </tr>
           <tr>
             <td style="text-align: center;font-weight:bold;background-color:{% if hyip.payeur %}#68FF33{% else %}#FF5533{% endif %}">
-              {% if hyip.payeur %}PAYE BIEN !{% else %}NE PAYE PAS !{% endif %}
+              {% if hyip.payeur %}{{ __('HYIP.PAYING') }} !{% else %}{{ __('HYIP.NOT_PAYING') }} !{% endif %}
             </td>
           </tr>
         </table>

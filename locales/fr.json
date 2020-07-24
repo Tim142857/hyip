@@ -52,5 +52,45 @@
 			"SAFEST": "Les + sûrs",
 			"SMALL_DEPOSIT": "Petits dépôts"
 		}
+	},
+	"INDEX":{
+		"ABOUT_ME": "A propos de moi",
+		"PART_ONE": "En quête de <b>liberté financière</b>, je suis un jeune actif de 30 ans à la recherche de bons plans sur Internet pour gagner de l'argent et notamment des revenus passifs",
+		"PART_TWO": "Ce site a été conçu pour partager tous mes bons plans et mes astuces. Contrairement à certains autres sites, je teste au préalable l'ensemble de ce que je vous propose. Et je partage avec vous aussi bien mes réussites que mes tentatives infructueuses.",
+		"PART_THREE": "Pour l'instant je m'intéresse beaucoup aux sites de type <b>HYIP</b> (Programme d'investissement à haut rendement), mais je compte bien me diversifier en investissant dans l'immobilier et dans le trading.",
+		"PART_FOUR": "Mon objectif est de développer une communauté d'entraide, si vous souhaitez participer, n'hésitez pas à:",
+		"PART_FIVE": "<b>Commenter</b> mes différents articles",
+		"PART_SIX": "<b>Tester</b> et donner un retour de mes bons plans",
+		"PART_SEVEN": "<b>Partager</b> ce site et les articles autour de vous",
+		"PART_HEIGHT": "Me <b>proposer</b> des plans à tester"
+	},
+	"IN_PREPARATION": {
+		"IN_PREPARATION": "Page en cours de création ... Un peu de patience :)"
+	},
+	"LAYOUT":{
+		"GOOD_PLANS": "Les bons plans",
+		"MENU": {
+			"BLOG": "BLOG",
+			"HYIPS": "HYIPS",
+			"REAL_ESTATE": "IMMOBILIER",
+			"TRADING": "TRADING",
+			"ADMIN": "ADMIN"
+		},
+		"FOOTER":{
+			"QUESTION": "Une question",
+			"PROPOSITION": "Une proposition",
+			"NOTICE": "Des remarques sur le site",
+			"PLAN": "Un bon plan à me faire tester",
+			"WRITE_ME": "Ecris moi",
+			"NAME": "NOM",
+			"EMAIL": "EMAIL",
+			"CONTENT": "MESSAGE",
+			"SEND": "ENVOYER"
+		}
+	},
+	"LOGIN":{
+		"LOGIN": "Connexion",
+		"USERNAME": "Username",
+		"PASSWORD": "Mot de passe"
 	}
 }
