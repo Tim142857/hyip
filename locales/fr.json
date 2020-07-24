@@ -31,7 +31,8 @@
 		"PLANS": "Plans",
 		"AFFILIATION": "Affiliation",
 		"OPINION": "Mon avis",
-		"PAYMENT_PROOFS": "Preuves de paiement / Images"
+		"PAYMENT_PROOFS": "Preuves de paiement / Images",
+		"UPDATED_AT": "Date de dernière mise à jour"
 	},
 	"HYIPS_PAGE": {
 		"NEW_HERE": "Nouveau dans la section ? Besoin de plus d'infos sur les <b>HYIP</b> ? Cliques ici ",

@@ -113,6 +113,12 @@ img{
 
 <div class="row bloc">
   <div class="col-sm">
+    {{ __('HYIP.UPDATED_AT') }} : {{ hyip.updatedAt|date("d/m/Y") }}
+  </div>
+</div>
+
+<div class="row bloc">
+  <div class="col-sm">
     <h2>{{ __('HYIP.PRESENTATION') }}</h2>
     {{ hyip.presentation }}
   </div>
