@@ -87,7 +87,9 @@
 			"EMAIL": "EMAIL",
 			"CONTENT": "MESSAGE",
 			"SEND": "ENVOYER"
-		}
+		},
+		"TEXT_SHARE_FB_1": "Tu trouves ces infos utiles",
+		"TEXT_SHARE_FB_2": "N'hésites pas à partager"
 	},
 	"LOGIN":{
 		"LOGIN": "Connexion",

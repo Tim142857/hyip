@@ -88,7 +88,9 @@
 			"CONTENT": "MESSAGE",
 			"SEND": "SEND",
 			"MESSAGE": "LAYOUT.FOOTER.MESSAGE"
-		}
+		},
+		"TEXT_SHARE_FB_1": "Do you find some useful informations",
+		"TEXT_SHARE_FB_2": "Share it"
 	},
 	"LOGIN":{
 		"LOGIN": "Login",

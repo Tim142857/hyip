@@ -1,4 +1,13 @@
 {% extends 'layout.twig' %}
+
+{% block header %}
+<meta property="og:url"           content="https://hyips.herokuapp.com//hyips/{{hyip.id}}" />
+<meta property="og:type"          content="website" />
+<meta property="og:title"         content="{{hyip.name|upper}}" />
+<meta property="og:description"   content="Un bon plan pour gagner de l'argent sur internet de façon passive !" />
+<meta property="og:image"         content="https://hyips.herokuapp.com/{{ getHyipLogoFileName(hyip) }}" />
+{% endblock %}
+
 {% block styles %}
 <style>
 .checked {
@@ -115,6 +124,14 @@ img{
   <div class="col-sm">
     {{ __('HYIP.UPDATED_AT') }} : {{ hyip.updatedAt|date("d/m/Y") }}
   </div>
+  <div class="col-sm">
+    Partager ce bon plan sur les réseaux :
+    <span class="fb-share-button"
+    data-href="https://hyips.herokuapp.com//hyips/{{hyip.id}}"
+    data-layout="button_count"
+    data-size="large">
+  </span>
+</div>
 </div>
 
 <div class="row bloc">
